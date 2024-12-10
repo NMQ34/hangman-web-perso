@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman - Results</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        {{if .Won}}
+            <h1 class="congratulations">Congratulations!</h1>
+            <p>You won! The word was: <strong>{{.Word}}</strong></p>
+        {{else}}
+            <h1 class="game-over">Game Over</h1>
+            <p>Sorry {{.Username}}! You lost. The correct word was: <strong>{{.Word}}</strong></p>
+        {{end}}
+
+        <form action="/reset" method="GET">
+            <button type="submit">Play Again</button>
+        </form>
+
+        <form action="/scoreboard" method="GET">
+            <button type="submit">View Scoreboard</button>
+        </form>
+
+        <form action="/index.html" method="GET">
+            <button type="submit" class="button">Back to Menu</button>
+        </form>
+    </div>
+
+    <script src="../static/js/javascript.js"></script> <!-- Inclure le script ici -->
+</body>
+</html>

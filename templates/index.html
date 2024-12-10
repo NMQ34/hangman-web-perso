@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Hangman Game</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <form method="POST" action="/start">
+            <!-- Zone de texte pour le pseudo -->
+            <input type="text" name="username" placeholder="Enter your username" required autofocus>
+
+            <!-- Conteneur pour la sélection de difficulté -->
+            <div class="difficulty-container">
+                <select name="difficulty">
+                    <option value="EASY">Easy</option>
+                    <option value="NORMAL">Normal</option>
+                    <option value="HARD">Hard</option>
+                    <option value="BONUS">Bonus</option>
+                </select>
+            </div>
+
+            <!-- Bouton Start Game -->
+            <button type="submit">Start Game</button>
+        </form>
+    </div>
+
+    <!-- Inclusion du fichier JavaScript -->
+    <script src="../static/js/javascript.js"></script>
+</body>
+</html>

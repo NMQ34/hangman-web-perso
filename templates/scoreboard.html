@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman - Scoreboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Scoreboard</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Username</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{range .Scores}}
+                <tr>
+                    <td>{{.Rank}}</td>
+                    <td>{{.Username}}</td>
+                    <td>{{.Score}}</td>
+                </tr>
+                {{end}}
+            </tbody>
+        </table>
+
+        <form action="/" method="GET">
+            <button type="submit">Return to Home</button>
+        </form>
+    </div>
+
+    <script src="../static/js/javascript.js"></script> <!-- Inclure le script ici -->
+</body>
+</html>
+
